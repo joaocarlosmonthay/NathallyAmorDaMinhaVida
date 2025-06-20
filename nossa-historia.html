@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Eterna História ⏳ </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Para Você</a></li>
+
+                <li><a href="nossa-historia.html" class="active">Nossa História</a></li>
+                <li><a href="alguns-momentos.html">Alguns Momentos</a></li>
+                <li><a href="nossa-musica.html">Nossa Música</a></li>
+            </ul>
+        </nav>
+
+        <h1>Um poco de nossa linda história💫</h1>
+    </header>
+
+    <main class="main-content">
+        <h2 class="section-heading">Cada Capítulo, Mais Amor</h2>
+        <section class="story-content">
+
+            <p>
+                A alguns bons anos, nos conheçemos, eramos estranhos um para o ouutro, quase como inimigos kakakakaaka
+                mas, o tempo foi passando e mesmo um pouco distantes, afinal, quase não nos falavamos, bom. . . Eu
+                confesso
+                eu tinha um crush em você meu amor. . . e bom. . . então seguimos com nossas vidas, mas Deus tinha
+                outros planos. . .
+            </p>
+
+            <p>
+                Então em um aniversário, trocamos muitos olhares, mais do que o normal, e passado o dia, quando caiu a
+                noite
+                mandei então uma mensagem, logo você me respondeu, e então fomos conversando e conversando, até que
+                chega mais
+                um aniversário, mas. . . já não eramos tão proximos, eu terminei. . . cometi o pior erro de minha vida.
+                . . mas então eu percebo
+                por um simples toque de mãos, que, você é o amor da minha vida. . . e voltamos então a conversar só que
+                com algo a mais
+                e então, era amr pra cá e pra lá, até que saímos, pela primeira vez. . . dia 14 de Stembro de 2024, e
+                esse é um dos
+                melhores dias de minha vida. . .
+            </p>
+            <p>
+                Mas, quem diria que seria a última vez que nos veriamos naquele ano. . . depois daquele dia nós
+                enfretamos muitas
+                batalhas, aceitação. . . e bom. . . nos mantivemos forte, mesmo diante de algumas discussões,
+                pensamentos, nos
+                mantivemos firmes e fortes, e chegou o dia que mudaria tudo, 1 de Janeiro de 2025, estavámos juntos, que
+                alegriiaaa
+                foi incrível, e desde então se passaram 6 meses, nos vimos muitas vezes, fizemos muitas coisinhas
+                juntinhos e esse está sendo o
+                melhor ano da minha vida, porque estamos juntos, mesmo longe. . . Mas isso vai ser só uma pequena
+                batalha que teremos que vencer
+                assim como tantas que tivemos, EUUU TEEE AMOOOO MUIITOOOO, Obrigado por tudo meu amor, por cada abaço,
+                beijinhos, beijões hehehe,
+                por tudooooo, você é o motivo de meu sorriso e minha alegria diaria, e esse é só um pequeno começo. . .
+                Você é o meu universo!!
+            </p>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+        <p>Eu te amo para todo sempre 🤍</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('h1, p, .section-heading, .main-nav li a');
+            elements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
+            });
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

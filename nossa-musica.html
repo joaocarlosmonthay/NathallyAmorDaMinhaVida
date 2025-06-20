@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Musiquinha 🎶</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Para Você</a></li>
+                <li><a href="nossa-historia.html">Nossa História</a></li>
+                <li><a href="alguns-momentos.html">Alguns Momentos</a></li>
+
+                <li><a href="nossa-musica.html" class="active">Nossa Música</a></li>
+            </ul>
+        </nav>
+
+        <h1>A Trilha Sonora do Nosso Amor 💖</h1>
+    </header>
+
+    <main class="main-content">
+        <h2 class="section-heading">"Velha Infância" - Tribalistas</h2>
+        <section class="music-content">
+
+            <pre>
+Você é assim
+Um sonho pra mim
+E quando eu não te vejo
+Eu penso em você
+Desde o amanhecer
+Até quando eu me deito
+
+Eu gosto de você
+E gosto de ficar com você
+Meu riso é tão feliz contigo
+O meu melhor amigo é o meu amor
+
+E a gente canta
+E a gente dança
+E a gente não se cansa
+De ser criança
+A gente brinca de viver
+A gente vive de sonhar
+
+E a gente sonha
+E a gente ama
+E a gente não se cansa
+De ser criança
+A gente brinca de viver
+A gente vive de sonhar
+            </pre>
+            <p>
+                Esta canção, com sua doçura e leveza, nos transporta para um lugar de alegria e simplicidade, assim como
+                o nosso amor. Que ela continue a embalar nossos momentos e a nos lembrar da beleza de viver e sonhar
+                juntinhos.
+            </p>
+            <div class="music-link">
+
+
+                <a href="https://www.youtube.com/watch?v=-A-b391d5Dw" target="_blank" rel="noopener noreferrer">Clique
+                    aqui e sinta o nosso amor. . .</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+        <p>Eu te amo para todo sempre 🤍</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('h1, .section-heading, .music-content p, .music-content pre, .music-content .music-link a, .main-nav li a');
+            elements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
+            });
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alguns Momentos Especiais ✨</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Para Você</a></li>
+                <li><a href="nossa-historia.html">Nossa História</a></li>
+
+                <li><a href="alguns-momentos.html" class="active">Alguns Momentos</a></li>
+                <li><a href="nossa-musica.html">Nossa Música</a></li>
+            </ul>
+        </nav>
+
+        <h1>Nossas Memórias Perfeitas 🤍</h1>
+    </header>
+
+    <main class="main-content">
+        <h2 class="section-heading">Fotinhas CutiCuti🥹</h2>
+        <section class="gallery-section">
+            <div class="image-grid">
+
+                <div class="image-item">
+                    <img src="img/imagem1.jpeg" alt="Nosso Momento 1"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x200/FFB6C1/FFFFFF?text=Momento+1';">
+
+                </div>
+
+                <div class="image-item">
+                    <img src="img/imagem2.jpeg" alt="Nosso Momento 2"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x200/ADD8E6/FFFFFF?text=Momento+2';">
+                </div>
+
+                <div class="image-item">
+                    <img src="img/imagem3.jpeg" alt="Nosso Momento 3"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x200/DDA0DD/FFFFFF?text=Momento+3';">
+                </div>
+
+                <div class="image-item">
+                    <img src="img/imagem4.jpeg" alt="Nosso Momento 4"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x200/FFDAB9/FFFFFF?text=Momento+4';">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+        <p>Eu te amo para todo sempre 🤍</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('h1, .section-heading, .image-item, .main-nav li a');
+            elements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
+            });
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+/* General body styling for a softer, cuter look */
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Continues to be readable and elegant */
+    margin: 0;
+    padding: 0;
+    /* Very soft, pastel gradient for background */
+    background: linear-gradient(to bottom right, #fef0f4, #e0f7fa);
+    /* Light pink to light aqua */
+    color: #5b5b5b;
+    /* Softer dark grey for text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures footer stays at the bottom */
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+    transition: background-color 0.5s ease;
+    /* Smooth background transition */
+}
+
+/* More prominent decorative heart background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Slightly larger, more visible faint hearts */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="%23f4c2c2" fill-opacity="0.3"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-repeat: repeat;
+    opacity: 0.35;
+    /* Increased opacity to make them stand out more */
+    z-index: -1;
+    /* Send it to the back */
+}
+
+/* Header styling */
+.main-header {
+    text-align: center;
+    padding: 25px 20px 0;
+    /* Slightly more padding for a softer feel */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* More opaque white for header */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    /* Softer, slightly larger shadow */
+    border-bottom-left-radius: 40px;
+    /* Even more rounded corners */
+    border-bottom-right-radius: 40px;
+    margin-bottom: 45px;
+    /* Increased margin */
+}
+
+.main-header h1 {
+    font-family: 'Great Vibes', cursive;
+    /* Retaining the romantic font */
+    font-size: 4em;
+    /* Slightly larger size for more impact */
+    color: #ff69b4;
+    /* Brighter, "cuter" pink */
+    margin: 25px 0 0;
+    /* Spacing below navigation */
+    text-shadow: 1px 1px 8px rgba(255, 105, 180, 0.4);
+    /* Pinkish glow shadow */
+}
+
+/* Navigation styling */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    /* Slightly more space between nav items */
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #e91e63;
+    /* Deep pink for links */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.15em;
+    /* Slightly larger font */
+    padding: 14px 22px;
+    /* More padding for bigger buttons */
+    border-radius: 50px;
+    /* Truly pill-shaped buttons */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    background-color: #ffe0e6;
+    /* Very light pink background for buttons */
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    /* Subtle pink border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: #ffb6c1;
+    /* Soft pink on hover/active */
+    color: #ffffff;
+    /* White text on hover/active */
+    transform: translateY(-4px) scale(1.03);
+    /* More noticeable lift and slight scale on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+    border-color: #e91e63;
+    /* More defined border on hover */
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    width: 92%;
+    /* Slightly wider content area */
+    max-width: 1000px;
+    /* Max width for larger screens */
+    margin: 0 auto;
+    padding: 45px;
+    /* Increased padding for softer feel */
+    background-color: rgba(255, 255, 255, 0.98);
+    /* Even more opaque white */
+    border-radius: 35px;
+    /* More rounded */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Softer, larger shadow */
+    animation: fadeInScale 1.2s ease-out forwards;
+    /* New, slightly longer animation */
+    border: 2px solid rgba(255, 105, 180, 0.1);
+    /* Very subtle, soft border */
+    position: relative;
+    /* For potential future decorative elements */
+    overflow: hidden;
+    /* Ensure nothing spills out */
+}
+
+/* Keyframe for fade-in and slight scale animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hero section (for index.html) */
+.hero-section {
+    text-align: center;
+    margin-bottom: 55px;
+    /* More spacing */
+    padding: 30px;
+    line-height: 2;
+    /* Increased line height for readability and softer feel */
+    color: #6d6d6d;
+    /* Slightly lighter grey */
+    background-color: #fffafb;
+    /* Very light, soft pink background for the text box */
+    border-radius: 25px;
+    /* More rounded corners for the text box */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    /* Very subtle shadow */
+    border: 1px dashed #ffb6c1;
+    /* Dotted border for a cute touch */
+}
+
+.hero-section p {
+    font-size: 1.45em;
+    /* Slightly larger font */
+    font-family: 'Montserrat', sans-serif;
+    max-width: 750px;
+    /* Wider text area */
+    margin: 0 auto;
+}
+
+/* Call to action (for index.html) */
+.call-to-action {
+    text-align: center;
+    margin-top: 45px;
+    font-size: 1.25em;
+    /* Larger font */
+    color: #ff69b4;
+    /* Matching main pink */
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    /* Slight letter spacing for cuter look */
+    text-shadow: 0.5px 0.5px 1px rgba(255, 105, 180, 0.1);
+}
+
+/* General section headings */
+.section-heading {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    /* Slightly larger heading */
+    color: #e91e63;
+    /* Deep pink */
+    margin-bottom: 45px;
+    /* More spacing */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+}
+
+/* Story section styling */
+.story-content {
+    line-height: 2;
+    /* Increased line height */
+    color: #6d6d6d;
+    font-size: 1.2em;
+    /* Slightly larger font */
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.story-content p {
+    margin-bottom: 2em;
+    /* More spacing between paragraphs */
+    text-align: justify;
+}
+
+/* Gallery section styling */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Slightly larger min-width */
+    gap: 30px;
+    /* More space between images */
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-item {
+    border-radius: 25px;
+    /* Even more rounded corners for images */
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+    /* Smoother, bouncier transition */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffb6c1;
+    /* Soft pink border around image items */
+}
+
+.image-item img {
+    width: 100%;
+    height: 240px;
+    /* Slightly increased height for images */
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+    /* Apply rounded corners to images as well (slightly less than container) */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smoother zoom effect */
+}
+
+.image-item:hover {
+    transform: scale(1.1) rotate(2deg);
+    /* More pronounced zoom and slight rotation for playfulness */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    /* Stronger, softer glow shadow on hover */
+}
+
+/* Music section styling */
+.music-content {
+    text-align: center;
+    line-height: 2;
+    color: #6d6d6d;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.music-content pre {
+    background-color: #fff0f5;
+    /* Very light, soft pink background for lyrics */
+    padding: 30px;
+    border-radius: 20px;
+    /* More rounded */
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15em;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.06);
+    /* Softer inner shadow */
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #555;
+    /* Slightly darker text for contrast */
+    border: 1px dashed #ffc0cb;
+    /* Dashed border for a cute look */
+}
+
+.music-content .music-link a {
+    display: inline-block;
+    background-color: #ff69b4;
+    /* Matching main pink */
+    color: white;
+    padding: 16px 32px;
+    /* Larger button */
+    border-radius: 40px;
+    /* Very rounded button */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* White border for contrast */
+}
+
+.music-content .music-link a:hover {
+    background-color: #e91e63;
+    /* Deeper pink on hover */
+    transform: translateY(-5px) scale(1.05);
+    /* More pronounced lift and scale */
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    border-color: #ffffff;
+    /* Brighter border on hover */
+}
+
+
+/* Footer styling */
+.main-footer {
+    text-align: center;
+    padding: 45px 20px;
+    /* More padding */
+    margin-top: 60px;
+    /* More margin */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* More opaque white */
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+    border-top-left-radius: 40px;
+    /* More rounded */
+    border-top-right-radius: 40px;
+    color: #ff69b4;
+    /* Matching header color */
+    border-top: 2px solid rgba(255, 105, 180, 0.1);
+    /* Subtle top border */
+}
+
+.main-footer p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2em;
+    /* Slightly larger font */
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(255, 105, 180, 0.3);
+    /* Soft pink shadow */
+}
+
+/* --- Responsiveness --- */
+
+/* For Tablets (e.g., 768px and up) */
+@media (min-width: 768px) {
+    .main-header h1 {
+        font-size: 5.5em;
+    }
+
+    .hero-section p,
+    .story-content p,
+    .music-content {
+        font-size: 1.35em;
+    }
+
+    .main-nav li a {
+        font-size: 1.3em;
+        padding: 16px 28px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For Desktops (e.g., 1024px and up) */
+@media (min-width: 1024px) {
+    .main-header h1 {
+        font-size: 6.5em;
+    }
+
+    .hero-section p,
+    .story-content p,
+    .music-content {
+        font-size: 1.45em;
+    }
+
+    .main-nav li a {
+        font-size: 1.4em;
+        padding: 18px 35px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        /* Adjust max width for grid */
+        margin: 0 auto;
+    }
+}
+
+/* Adjustments for smaller screens (mobile) */
+@media (max-width: 767px) {
+    .main-header h1 {
+        font-size: 3em;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+
+    .main-nav li a {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+
+    .hero-section p,
+    .story-content p,
+    .music-content {
+        font-size: 1.05em;
+        padding: 0 15px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .image-item img {
+        height: 200px;
+    }
+
+    .main-content {
+        padding: 25px;
+        width: 95%;
+    }
+
+    .main-footer p {
+        font-size: 1.9em;
+    }
+}
